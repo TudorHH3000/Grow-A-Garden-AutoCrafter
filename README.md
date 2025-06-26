@@ -36,6 +36,7 @@ if the roblox purchase ui glitches (errors on cancel purchase) script wont be ab
 
 ## contact
 If you need help or want to discuss changes to the tool:
+
 Discord: tudorhh3000 (originally went by FUCK#1100)
 
 ## license
