@@ -1,3 +1,6 @@
+# Read this
+sadly my laptop gave up on me and i didnt get to push the tool with all crafts to the github. development will be postponed to when i get a new computer.
+
 # Grow a Garden AutoCrafter
 
 Tool built with Python, PySimpleGUIQt, pyautogui, pynput, and AutoHotkey.
