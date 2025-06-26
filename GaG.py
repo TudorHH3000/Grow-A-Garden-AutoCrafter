@@ -38,6 +38,7 @@ hamster = Hamster()
 pyautogui.PAUSE = (1)
 ahk = AHK()
 ahk.set_coord_mode("Mouse", "Screen")
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.md')
 
 #ui
 layout = [
@@ -193,9 +194,9 @@ while True:
 
     if event == sg.WIN_CLOSED:
         break
-        
-        if event == "macro instructions"
-            os.startfile('README.md')
+
+    if event == "macro instructions":
+            os.startfile(file_path)
 
     if event == 'Select':
         if values['doodooselect'] == 'lightning rod':
