@@ -12,11 +12,11 @@ if the roblox purchase ui glitches (errors on cancel purchase) script wont be ab
 - Python 3.13 (only tested version on my computer)
   [Download Python](https://www.python.org/downloads/)
 
+- 1080p screen (might add 720p support in the future if people need it)
+
 - Python packages (install via pip):  
   ```bash
   pip install ahk[binaries] PySimpleGUIQt pyautogui pynput
-  
-  - 1080p screen (might add 720p support in the future if people need it)
   
 ## instructions to afk
   - Stand with the back towards the crafting bench zoomed out looking towards it
