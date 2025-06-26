@@ -1,0 +1,4 @@
+ahk[binaries]
+PySimpleGUIQt
+pyautogui
+pynput
