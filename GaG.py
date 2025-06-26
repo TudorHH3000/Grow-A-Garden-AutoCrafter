@@ -1,4 +1,4 @@
-# Version 0.1.0
+# Version 0.1.1 fixed long term runtime stopping afteer 1000 loops (around 11k seconds)
 
 import pyautogui
 import PySimpleGUIQt as sg
@@ -81,6 +81,7 @@ def hap(button):
     time.sleep(1)
 
 def qsel():
+    global selitem
     selitem = values['doodooselect']
     window["selecttext"].update(f"selected item: {selitem}")
     selection()
@@ -144,22 +145,23 @@ def insertcraft():
  
 def checkloop():
     global progress, colorrbx, clickx, clicky, runs
-    of = random.randint(-2, 2)
-    kep("e")    
-    time.sleep(4)
-    if pyautogui.pixelMatchesColor(1550, 500, colorrbx):
-        ahk.mouse_move(clickx, clicky, speed=0)
-        time.sleep(0.1)
-        ahk.mouse_move(of, of, speed=10, relative=True)
-        time.sleep(0.5)
-        hap(Button.left)
-        time.sleep(5)
-        checkloop()
-    else:
-        runs += 1
-        progress = "collected"
-        time.sleep(30)
-        startmacro()
+    while True:
+        kep("e")
+        time.sleep(15)
+        if pyautogui.pixelMatchesColor(1550, 500, colorrbx):
+            of = random.randint(-2, 2)
+            ahk.mouse_move(clickx, clicky, speed=0)
+            time.sleep(0.1)
+            ahk.mouse_move(of, of, speed=10, relative=True)
+            time.sleep(0.5)
+            hap(Button.left)
+            time.sleep(15)
+        else:
+            break
+    runs += 1
+    progress = "collected"
+    time.sleep(30)
+    startmacro()
     
 def on_press(key):
     global running, tim, st_tim, started
