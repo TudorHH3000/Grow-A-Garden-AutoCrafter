@@ -43,7 +43,7 @@ ahk.set_coord_mode("Mouse", "Screen")
 layout = [
         [sg.Text('Item list', background_color=bgcol, text_color=textcol)],
         [sg.Combo(['lightning rod', 'reclaimer', 'test value'],text_color=textcol , background_color=elcol, key='doodooselect', readonly=True)],
-        [sg.Button('poopoocaca', button_color=(textcol, elcol))],
+        [sg.Button('Select', button_color=(textcol, elcol))],
         [sg.Text(text=(f"selected item: {selitem}"), key="selecttext", background_color=bgcol)],
         [sg.Text('', background_color=bgcol, key='sep1')],
         [sg.Button(button_text="macro instructions", button_color=(textcol,elcol))],
@@ -191,10 +191,13 @@ while True:
 
     event, values = window.read(timeout=100)
 
-    if event== sg.WIN_CLOSED:
+    if event == sg.WIN_CLOSED:
         break
+        
+        if event == "macro instructions"
+            os.startfile('README.md')
 
-    if event == 'poopoocaca':
+    if event == 'Select':
         if values['doodooselect'] == 'lightning rod':
             crafting = "lrod"
             qsel()
